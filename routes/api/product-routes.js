@@ -8,11 +8,11 @@ router.get('/', async (req, res) => {
   // find all products
   try {
     const allProducts = await Product.findAll({
-      include: [{ model: Category}, { model: Tag, through: ProductTag, as: 'genre'}]
+      include: [{ model: Category}, { model: Tag, through: ProductTag, as: 'description'}]
     });
     res.status(200).json(allProducts);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
   // be sure to include its associated Category and Tag data
 });
@@ -22,12 +22,12 @@ router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   try {
     const product = await Product.findByPk(req.params.id, {
-      include: [{ model: Category }]
+      include: [{ model: Category}, { model: Tag, through: ProductTag, as: 'description'}]
     });
     res.status(200).json(product);
     // be sure to include its associated Category and Tag data
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -57,9 +57,9 @@ router.post('/', (req, res) => {
       res.status(200).json(product);
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
+    .catch((error) => {
+      console.log(error);
+      res.status(400).json(error);
     });
 });
 
@@ -73,6 +73,7 @@ router.put('/:id', (req, res) => {
   })
     .then((product) => {
       // find all associated tags from ProductTag
+      console.log(product);
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
     .then((productTags) => {
@@ -99,9 +100,9 @@ router.put('/:id', (req, res) => {
       ]);
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
-    .catch((err) => {
-      // console.log(err);
-      res.status(400).json(err);
+    .catch((error) => {
+      console.error(error);
+      res.status(400).json(error);
     });
 });
 
@@ -113,13 +114,10 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       }
     });
-    if (!productData) {
-      res.status(404).json({ message: 'No product found with this id!' });
-      return;
-    }
+
     res.status(200).json(productData);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 

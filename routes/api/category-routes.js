@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
   try {
     const allCategories = await Category.findAll({
       // include its associated Products
-      include: { model: Product },
+      include: [{ model: Product }],
     });
 
     res.status(200).json(allCategories);
@@ -22,14 +22,8 @@ router.get("/:id", async (req, res) => {
   try {
     const selectedId = await Category.findByPk(req.params.id, {
       // include its associated Products
-      include: { model: Product },
+      include: [{ model: Product }],
     });
-
-    if (!selectedId) {
-      res
-        .status(404)
-        .json({ message: "Category ID not Found, please enter a valid ID." });
-    }
 
     res.status(200).json(selectedId);
   } catch (error) {
@@ -38,7 +32,12 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  // create a new category
+  /* create a new category
+     req.body should look like this...
+  {
+    "category_name": "Alternative"
+  }
+  */
   try {
     const newCategory = await Category.create(req.body);
 
@@ -59,13 +58,6 @@ router.put("/:id", async (req, res) => {
       },
     });
 
-    if (!selectedId) {
-      res.status(404).json({
-        message: "Category ID not Found, cannot update without a valid ID.",
-      });
-      return;
-    }
-
     res.status(200).json(categoryUpdate);
   } catch (error) {
     res.status(500).json(error);
@@ -81,12 +73,6 @@ router.delete("/:id", async (req, res) => {
         id: selectedId,
       },
     });
-    if (!selectedId) {
-      res.status(404).json({
-        message: "Category ID not Found, cannot update without a valid ID.",
-      });
-      return;
-    }
 
     res.status(200).json(categoryDelete);
   } catch (error) {
