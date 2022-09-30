@@ -1,7 +1,7 @@
 {
-  "name": "module-13-challenge-orm",
+  "name": "fast-cart",
   "version": "1.0.0",
-  "description": "",
+  "description": "an ecommerce back-end exercize, to demonstrate defining models and associations using the sequelize package, and perform RESTful CRUD operations.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
+    "url": "https://github.com/blchase215/fast-cart"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ecommerce, api, RESTful CRUD, mySQL, sequelize"],
+  "author": "Brian Chase",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.3"
