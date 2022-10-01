@@ -48,7 +48,7 @@ And you are finished.  Now you can use [Insomnia](https://insomnia.rest/) to tes
 
 ## Walk-Through Video
 
-https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view
+[Walk-Through Video Link](https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view)
 
 ## Github Repo
 
