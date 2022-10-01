@@ -50,7 +50,6 @@ https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view
  - [Insomnia](https://insomnia.rest/)
 
 ## Github Repo
----
 
 [Github Repo](https://github.com/blchase215/fast-cart)
 
