@@ -6,7 +6,7 @@
   - [Installation](#installation)
   - [Walk-Through Video](#walk-through-video)
   - [Technologies Used](#technologies-used)
-  - [Deployed Link (Heroku)](#deployed-link-heroku)
+  - [Github Repo](#github-repo)
 
 ## Description
 
@@ -49,7 +49,7 @@ https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view
  - [Sequelize](https://sequelize.org/)
  - [Insomnia](https://insomnia.rest/)
 
-## Links
+## Github Repo
 ---
 
 [Github Repo](https://github.com/blchase215/fast-cart)
