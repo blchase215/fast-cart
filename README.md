@@ -43,6 +43,7 @@ And you are finished.  Now you can use [Insomnia](https://insomnia.rest/) to tes
  - [Node.js](https://nodejs.org/en/)
  - [MySQL2](https://www.npmjs.com/package/mysql2)
  - [Sequelize](https://sequelize.org/)
+ - [Dotenv](https://www.npmjs.com/package/dotenv)
  - [Insomnia](https://insomnia.rest/)
 
 ## Walk-Through Video
