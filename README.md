@@ -14,6 +14,8 @@ This is a server side api capable of viewing, creating, updating, and deleting, 
 
 ## Installation
 
+**Note**:  This is strictly a back-end application.  You would need further client-side code to make it accessible to a user.
+
 To install, first clone the repo to your local machine.  Next, install the node packages by running the following code in your terminal:
 
     npm install
