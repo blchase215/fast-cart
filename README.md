@@ -4,8 +4,8 @@
 
   - [Description](#description)
   - [Installation](#installation)
-  - [Walk-Through Video](#walk-through-video)
   - [Technologies Used](#technologies-used)
+  - [Walk-Through Video](#walk-through-video)
   - [Github Repo](#github-repo)
 
 ## Description
@@ -38,16 +38,16 @@ Once seeding is complete, enter the following to start the server:
 
 And you are finished.  Now you can use [Insomnia](https://insomnia.rest/) to test the routes!
 
-## Walk-Through Video
-
-https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view
-
 ## Technologies Used
 
  - [Node.js](https://nodejs.org/en/)
  - [MySQL2](https://www.npmjs.com/package/mysql2)
  - [Sequelize](https://sequelize.org/)
  - [Insomnia](https://insomnia.rest/)
+
+## Walk-Through Video
+
+https://drive.google.com/file/d/1-7GM3tgzZbztaGp2cInDgtImzEVfU0pe/view
 
 ## Github Repo
 
